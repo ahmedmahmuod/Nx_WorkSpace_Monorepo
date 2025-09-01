@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { interval } from 'rxjs';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
+  imports: [RouterModule],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  protected title = 'Nx_Workspace';
+
+  constructor() {
+    interval(1000).pipe(takeUntilDestroyed()).subscribe(value => {
+      console.log('Value:', value);
+    });
+  }
+
 }

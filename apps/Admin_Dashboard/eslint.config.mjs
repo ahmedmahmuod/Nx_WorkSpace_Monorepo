@@ -1,6 +1,5 @@
 import nx from '@nx/eslint-plugin';
 import baseConfig from '../../eslint.config.mjs';
-import luftbornRxjsTakeuntilDestroy from 'luftborn-rxjs-takeuntil-destroy';
 
 export default [
   ...baseConfig,
@@ -8,9 +7,6 @@ export default [
   ...nx.configs['flat/angular-template'],
   {
     files: ['**/*.ts'],
-    plugins: {
-      'luftborn-rxjs-takeuntil-destroy': luftbornRxjsTakeuntilDestroy,
-    },
     rules: {
       '@angular-eslint/directive-selector': [
         'error',
@@ -28,13 +24,11 @@ export default [
           style: 'kebab-case',
         },
       ],
-
-      // ✨ القاعدة اللي هتجبرك تستخدم takeUntilDestroyed أو أي take operator
-      'luftborn-rxjs-takeuntil-destroy/require-take-until-destroyed': 'error',
     },
   },
   {
     files: ['**/*.html'],
+    // Override or add rules here
     rules: {},
   },
 ];
