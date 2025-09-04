@@ -1,5 +1,8 @@
 {
   "buildCommand": "npx nx build Nx_Workspace --configuration=production",
-  "outputDirectory": "dist/apps/Nx_Workspace",
-  "framework": "angular"
+  "outputDirectory": "dist/apps/Nx_Workspace/browser",
+  "framework": "angular",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
