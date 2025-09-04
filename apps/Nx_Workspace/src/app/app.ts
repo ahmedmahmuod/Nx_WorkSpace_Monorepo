@@ -1,20 +1,12 @@
 import { Component } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
-import { interval } from 'rxjs';
+import { TestComponent } from '@nx-workspace/ui';
 
 @Component({
-  imports: [RouterModule],
+  standalone: true,
+  imports: [RouterModule, TestComponent],
   selector: 'app-root',
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  styleUrls: ['./app.scss'],
 })
-export class App {
-
-  constructor() {
-    interval(1000).pipe(takeUntilDestroyed()).subscribe(value => {
-      console.log('Value:', value);
-    });
-  }
-
-}
+export class App {}

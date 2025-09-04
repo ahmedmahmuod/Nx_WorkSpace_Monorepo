@@ -19,6 +19,11 @@
           {
             "glob": "**/*",
             "input": "apps/Admin_Dashboard/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "./node_modules/@global/assets",
+            "output": "assets"
           }
         ],
         "styles": ["apps/Admin_Dashboard/src/styles.scss"]

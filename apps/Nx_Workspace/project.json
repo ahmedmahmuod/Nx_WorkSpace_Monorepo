@@ -19,6 +19,11 @@
           {
             "glob": "**/*",
             "input": "apps/Nx_Workspace/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "./node_modules/@global/assets",
+            "output": "assets"
           }
         ],
         "styles": ["apps/Nx_Workspace/src/styles.scss"]

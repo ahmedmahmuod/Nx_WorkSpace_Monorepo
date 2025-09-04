@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+// :root selector is used to define global CSS variables
+:root {
+    --bg-dark-color: #043873;
+    --bg-light-color: #ffffff;
+
+    --text-dark-color: #212529;
+    --text-light-color: #FFFFFF;
+
+    --primary-color: #4F9CF9;
+    --seconedary-color: #FFE492;
+
+}
+
+
+// All elements selector
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light-color);
+    transition: all 0.4s ease;
+}
