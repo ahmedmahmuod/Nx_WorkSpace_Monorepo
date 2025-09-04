@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx nx build your-app --configuration=production",
+  "buildCommand": "npx nx build Nx_Workspace --configuration=production",
   "outputDirectory": "dist/apps/Nx_Workspace",
   "framework": "angular"
 }
